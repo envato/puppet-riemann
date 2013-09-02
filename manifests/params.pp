@@ -4,6 +4,7 @@ class riemann::params {
   $dash_port = 4567
   $dash_host = 'localhost'
   $dash_user = 'riemann-dash'
+  $dash_ws_config_path = '/etc/riemann-dash.json'
   $net_user = 'riemann-net'
   $health_user = 'riemann-health'
   $port = 5555
