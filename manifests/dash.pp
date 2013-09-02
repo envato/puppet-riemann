@@ -19,7 +19,7 @@ class riemann::dash(
   $host = $riemann::params::dash_host,
   $port = $riemann::params::dash_port,
   $user = $riemann::params::dash_user,
-  $ws_config_path = $riemann::params::dash_ws_config_path,
+  $config_path = $riemann::params::dash_config_path,
 ) inherits riemann::params {
   validate_string($host)
   validate_string($user)

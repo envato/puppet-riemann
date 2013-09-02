@@ -2,7 +2,7 @@ class riemann::dash::config {
   $host = $riemann::dash::host
   $port = $riemann::dash::port
   $user = $riemann::dash::user
-  $ws_config_path = $riemann::dash::ws_config_path
+  $config_path = $riemann::dash::config_path
 
   case $::osfamily {
     'Debian': {
@@ -31,9 +31,9 @@ class riemann::dash::config {
     content => template('riemann/etc/riemann-dash.rb.erb'),
   }
 
-  file { $ws_config_path:
-    ensure => present,
+  file { $config_path:
+    ensure => 'directory',
     owner  => $user,
-    mode   => '0644',
+    mode   => '0755',
   }
 }
